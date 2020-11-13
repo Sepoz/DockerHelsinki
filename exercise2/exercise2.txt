@@ -1,0 +1,41 @@
+$ docker container . ls -a
+
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                     PORTS               NAMES
+edd6040352ef        nginx               "/docker-entrypoint.…"   2 minutes ago       Exited (0) 2 minutes ago                       affectionate_zhukovsky
+e171580f29f7        nginx               "/docker-entrypoint.…"   2 minutes ago       Exited (0) 2 minutes ago                       blissful_swartz
+dc2c166a6ba2        nginx               "/docker-entrypoint.…"   2 minutes ago       Up 2 minutes               80/tcp              jolly_clarke
+                                                                                                                                                                                
+ 
+$ docker stop dc
+
+dc                                                                                                                                                                                    
+ 
+
+$ docker rm edd e1 dc
+
+edd
+e1
+dc                                                                                                                                                                                    
+
+
+$ docker container ls -a
+
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+                                                                                                                                                                                 
+ 
+$ docker images
+
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+nginx               latest              992e3b7be046        5 days ago          133MB
+
+ 
+$ docker rmi 99
+
+Untagged: nginx:latest
+Untagged: nginx@sha256:fc66cdef5ca33809823182c9c5d72ea86fd2cef7713cf3363e1a0b12a5d77500
+Deleted: sha256:992e3b7be0465856d44bed9b3d5596267205a4cfaec4241439be42f77b3539a3
+Deleted: sha256:e014457ff9319b8690375e3ac14976502415be9d68df53a0136a0561b6cb236a
+Deleted: sha256:3bb8a13c71107e11f48df43d7d558dfb391f08fc7036185812ecd603b9734c92
+Deleted: sha256:0a866944b7e98bab21f41ac4b398a3b7cac0ffcf5d029a977ae21d6d037161cc
+Deleted: sha256:e86db1d72cae419abda3f9e14cd3dd6d54799a360968ea4f7988f8bb4660f7ed
+Deleted: sha256:07cab433985205f29909739f511777a810f4a9aff486355b71308bb654cdc868

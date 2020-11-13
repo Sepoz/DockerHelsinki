@@ -1,0 +1,3 @@
+$ docker run -d -p 8000:8000 -v $(pwd)/log.txt:/app/logs.txt 667
+
+1c0474c2a9d938272383070bb044b46e7444944ded6402d5d2162475c52cf577

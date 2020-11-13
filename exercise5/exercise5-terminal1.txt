@@ -1,0 +1,26 @@
+$ docker run -d -it ubuntu  sh -c 'echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website;'
+
+Unable to find image 'ubuntu:latest' locally
+latest: Pulling from library/ubuntu
+b6a83d81d1f4: Pull complete 
+Digest: sha256:bc2f7250f69267c9c6b66d7b6a81a54d3878bb85f1ebb5f951c896d13e6ba537
+Status: Downloaded newer image for ubuntu:latest
+4bbd65e5f81fd3f278b2fce6c7bd296d1125a16e5492f643a2871112b2948767                                                                                                                                                                                  
+ 
+
+$ docker container ls
+
+CONTAINER ID        IMAGE               COMMAND                   CREATED             STATUS              PORTS               NAMES
+4bbd65e5f81f        ubuntu              "sh -c 'echo \"Input …"   14 seconds ago      Up 13 seconds                           agitated_brattain                                                                                                                                                                                   
+ 
+
+$ docker start 4bbd65e5f81f
+
+4bbd65e5f81f
+                                                                                                                                                                                 
+ 
+$ docker exec -it 4bbd65e5f81f
+
+root@4bbd65e5f81f:/# apt update && sudo apt upgrade
+
+root@4bbd65e5f81f:/# apt install curl

@@ -1,0 +1,10 @@
+$ docker images
+
+REPOSITORY                             TAG                 IMAGE ID            CREATED             SIZE
+devopsdockeruh/first_volume_exercise   latest              7ec953697e38        4 months ago        942MB                                                                                                                                                                                   
+ 
+
+$ docker run -v $(pwd)/logs.txt:/usr/app/logs.txt 7ec
+
+Wrote to file /usr/app/logs.txt
+

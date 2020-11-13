@@ -1,0 +1,21 @@
+$ docker run -d --rm -it devopsdockeruh/exec_bash_exercise
+
+Unable to find image 'devopsdockeruh/exec_bash_exercise:latest' locally
+latest: Pulling from devopsdockeruh/exec_bash_exercise
+ddb55f8ab0a8: Pull complete 
+Digest: sha256:d38b6f6b0eed2880e25c9eb7f83f1cd016ffe3a56c9a3fec6e7bee480bf1ed0f
+Status: Downloaded newer image for devopsdockeruh/exec_bash_exercise:latest
+49d35060fd4caeacb55995132c578bb13d287f1e10900b04309e35376b4594ef                                                                                                             
+
+
+$ docker container ls 
+
+CONTAINER ID        IMAGE                               COMMAND                  CREATED             STATUS              PORTS               NAMES
+49d35060fd4c        devopsdockeruh/exec_bash_exercise   "docker-entrypoint.s…"   31 seconds ago      Up 29 seconds                           flamboyant_bassi                                                                                                                                                                                    
+
+
+$ docker in  exec -it 49d35060fd4c bash
+
+root@49d35060fd4c:/usr/app# tail -f ./logs.txt
+Secret message is:
+"Docker is easy"

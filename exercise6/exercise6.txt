@@ -1,0 +1,38 @@
+$ docker build -t docker-clock .
+
+Sending build context to Docker daemon  2.048kB
+Step 1/2 : FROM devopsdockeruh/overwrite_cmd_exercise
+latest: Pulling from devopsdockeruh/overwrite_cmd_exercise
+Digest: sha256:02e38f4285d5cfaff5ed57ae67a8d99e041027da8f5c972329b46e2b7a47b7d2
+Status: Downloaded newer image for devopsdockeruh/overwrite_cmd_exercise:latest
+ ---> 3d2b622b1849
+Step 2/2 : CMD [ "/bin/bash" ]
+ ---> Running in 6eb20294e9bb
+Removing intermediate container 6eb20294e9bb
+ ---> 5dde45464683
+Successfully built 5dde45464683
+Successfully tagged docker-clock:latest                                                                                                                                                                                  
+
+
+$ docker images
+
+REPOSITORY                              TAG                 IMAGE ID            CREATED             SIZE
+docker-clock                            latest              5dde45464683        47 seconds ago      908MB
+devopsdockeruh/overwrite_cmd_exercise   latest              3d2b622b1849        12 months ago       908MB                                                                                                                                                                                 
+ 
+
+$ docker run docker-clock
+
+-h,       	--help           	to show this message
+-a [age], 	--adult [age]    	to check if you're older than 18
+-c [time],	--clock [time]   	to start a clock
+-t [size],	--triangle [size]	to draw a triangle, takes second argument as the size                                                                                                                                                                               
+ 
+
+$ docker run docker-clock -c 1
+
+2
+3
+4
+5
+6

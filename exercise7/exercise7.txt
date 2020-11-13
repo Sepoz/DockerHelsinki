@@ -1,0 +1,23 @@
+$ docker build -t curler .
+
+Step 1/5 : FROM ubuntu:16.04
+Step 2/5 : RUN apt-get update && apt-get install -y curl
+Step 3/5 : COPY script.sh .
+Step 4/5 : RUN chmod a+rx /script.sh
+Step 5/5 : CMD ./script.sh
+Successfully built 069c35f7ad55
+Successfully tagged curler:latest                                                                                                                                                                                 
+ 
+
+$ docker run -it curler[?2004l
+
+Input website:
+helsinki.fi
+Searching..
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="http://www.helsinki.fi/">here</a>.</p>
+</body></html>

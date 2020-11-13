@@ -1,0 +1,6 @@
+$ docker images
+
+REPOSITORY                      TAG                 IMAGE ID            CREATED             SIZE
+devopsdockeruh/ports_exercise   latest              40f5014f7503        4 months ago        119MB                                                                                                                                                                                 
+ 
+$ docker run -d -p 8080:80 40f
